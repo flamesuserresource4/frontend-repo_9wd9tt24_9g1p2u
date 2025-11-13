@@ -109,6 +109,15 @@
     text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 14px rgba(238,156,96,0.25);
   }
 
+  /* Custom highlight gradient per request (blush → apricot → rose) */
+  .gradient-text-highlight {
+    background-image: linear-gradient(100deg, #e9bcb9, #e9a24f, #a64055);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 14px rgba(233,162,79,0.28);
+  }
+
   /* Brand glow ring */
   .gradient-ring { position: relative; }
   .gradient-ring:before {
@@ -160,8 +169,8 @@
   .aspect-inner { position: absolute; inset: 0; }
 
   /* Subtle tilt utilities for the marquee columns */
-  .tilt-left { transform: rotate(20deg); transform-origin: center; }
-  .tilt-right { transform: rotate(20deg); transform-origin: center; }
+  .tilt-left { transform: rotate(12deg); transform-origin: center; }
+  .tilt-right { transform: rotate(12deg); transform-origin: center; }
 
   @media (max-width: 640px) {
     .tilt-left, .tilt-right { transform: none; }
