@@ -48,6 +48,12 @@
   100% { background-position: 200% 0; }
 }
 
+/* Vertical marquee for stats */
+@keyframes marqueeUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
 @layer utilities {
   .animate-float { animation: float 6s ease-in-out infinite; }
   .animate-pulse-glow { animation: pulseGlow 2.4s ease-in-out infinite; }
@@ -74,4 +80,6 @@
     z-index: -1;
     opacity: .7;
   }
+  .marquee-mask { mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent); }
+  .marquee-up { will-change: transform; animation: marqueeUp 16s linear infinite; }
 }
