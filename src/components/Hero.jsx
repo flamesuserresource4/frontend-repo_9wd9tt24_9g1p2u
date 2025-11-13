@@ -35,7 +35,7 @@ function Hero() {
             <h1 className="mt-5 text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight" style={{ color: 'var(--brand-white)' }}>
               The Mindset, Career Clarity, and Strategy Roadmap
               <span className="block mt-2">
-                to Your <span className="gradient-text-contrast">High‑Value Engineering Future</span>
+                to Your <span className="gradient-text-apricot-plum">High‑Value Engineering Future</span>
               </span>
             </h1>
 
@@ -61,7 +61,7 @@ function Hero() {
             </div>
           </div>
 
-          {/* Right: Dual vertical marquee stats with film-reel aesthetics and 4:3 cards, slight tilt */}
+          {/* Right: Dual vertical marquee stats with film-reel aesthetics and 4:3 cards, parallel tilt to the right */}
           <div className="relative">
             <div className="absolute -inset-6 blur-3xl" style={{ background: 'linear-gradient(45deg, rgba(72,21,78,0.25), rgba(102,34,73,0.18), rgba(238,156,96,0.15))' }} aria-hidden="true" />
 
