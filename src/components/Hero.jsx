@@ -63,7 +63,7 @@ function Hero() {
 
           {/* Right: Dual vertical marquee stats with film-reel aesthetics and 4:3 cards, parallel tilt to the right */}
           <div className="relative">
-            <div className="absolute -inset-6 blur-3xl" style={{ background: 'linear-gradient(45deg, rgba(72,21,78,0.25), rgba(102,34,73,0.18), rgba(238,156,96,0.15))' }} aria-hidden="true" />
+            {/* Removed blue gradient glow box beneath the marquees */}
 
             <div className="relative grid grid-cols-2 gap-5">
               {/* Column A */}

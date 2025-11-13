@@ -109,13 +109,12 @@
     text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 14px rgba(238,156,96,0.25);
   }
 
-  /* Custom highlight gradient per request (blush → apricot → rose) */
+  /* Highlight text: match 1:1 session button gradient but skip darkest color and remove glow */
   .gradient-text-highlight {
-    background-image: linear-gradient(100deg, #e9bcb9, #e9a24f, #a64055);
+    background-image: linear-gradient(90deg, var(--brand-plum-700), var(--brand-rose-600), var(--brand-apricot));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 14px rgba(233,162,79,0.28);
   }
 
   /* Brand glow ring */
