@@ -1,6 +1,6 @@
 function TestimonialCard({ quote, name, role }) {
   return (
-    <div className="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm">
+    <div className="rounded-2xl p-6 bg-white/80 border border-slate-200 shadow-sm card-hover">
       <p className="text-slate-800">“{quote}”</p>
       <div className="mt-4">
         <p className="font-semibold text-slate-900">{name}</p>
@@ -18,7 +18,10 @@ function Testimonials() {
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-16 md:py-24 bg-white relative">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden>
+        <div className="absolute inset-x-0 -top-24 h-48 bg-gradient-to-b from-pink-100/60 to-transparent blur-2xl" />
+      </div>
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Testimonials</h2>
         <p className="mt-2 text-slate-600 max-w-2xl">Outcome-focused, practical guidance that respects where you are today.</p>

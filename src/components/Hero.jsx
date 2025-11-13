@@ -9,20 +9,20 @@ function Hero() {
 
       <div className="relative z-10 h-full w-full flex items-center">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="backdrop-blur-sm bg-white/60 dark:bg-white/50 rounded-2xl p-6 md:p-10 shadow-xl pointer-events-none">
-            <p className="text-sm md:text-base font-medium tracking-wide text-blue-700">Beyond The Rank</p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mt-2">
-              The Mindset, Career Clarity, and Strategy Roadmap to Your High-Value Engineering Future
+          <div className="glass rounded-2xl p-6 md:p-10 shadow-xl pointer-events-none gradient-ring">
+            <p className="text-sm md:text-base font-medium tracking-wide text-cyan-300">Beyond The Rank</p>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mt-2">
+              <span className="gradient-text">The Mindset, Career Clarity, and Strategy Roadmap</span>
+              <span className="block text-white/90">to Your High-Value Engineering Future</span>
             </h1>
-            <p className="mt-4 md:mt-6 text-slate-700 text-base md:text-lg max-w-3xl">
-              A practical, no-fluff guidance platform for Tech Engineers, College Students, and School Students.
-              Build clarity, identify strengths, and chart an intentional path to a high-value, future-proof career.
+            <p className="mt-4 md:mt-6 text-slate-200 text-base md:text-lg max-w-3xl">
+              A practical, no-fluff guidance platform for Tech Engineers, College Students, and School Students. Build clarity, identify strengths, and chart an intentional path to a high-value, future-proof career.
             </p>
             <div className="mt-6 flex flex-wrap gap-3 pointer-events-auto">
-              <a href="#sessions" className="inline-flex items-center justify-center rounded-lg bg-blue-600 text-white px-4 py-2.5 text-sm font-semibold shadow hover:bg-blue-700 transition-colors">
+              <a href="#sessions" className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 via-sky-400 to-emerald-400 animate-gradient text-white px-4 py-2.5 text-sm font-semibold shadow hover:opacity-90 transition">
                 Upcoming Live Session
               </a>
-              <a href="#counsellors" className="inline-flex items-center justify-center rounded-lg bg-white text-slate-900 px-4 py-2.5 text-sm font-semibold shadow border border-slate-200 hover:bg-slate-50 transition-colors">
+              <a href="#counsellors" className="inline-flex items-center justify-center rounded-lg bg-white/10 text-white px-4 py-2.5 text-sm font-semibold shadow border border-white/20 hover:bg-white/20 transition">
                 Meet Counsellors
               </a>
             </div>
@@ -30,7 +30,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/0 to-slate-950" />
     </section>
   )
 }
