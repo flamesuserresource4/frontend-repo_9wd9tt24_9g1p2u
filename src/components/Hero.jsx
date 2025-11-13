@@ -35,7 +35,7 @@ function Hero() {
             <h1 className="mt-5 text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight" style={{ color: 'var(--brand-white)' }}>
               The Mindset, Career Clarity, and Strategy Roadmap
               <span className="block mt-2">
-                to Your <span className="gradient-text">High‑Value Engineering Future</span>
+                to Your <span className="gradient-text-contrast">High‑Value Engineering Future</span>
               </span>
             </h1>
 
@@ -61,19 +61,21 @@ function Hero() {
             </div>
           </div>
 
-          {/* Right: Dual vertical marquee stats with film-reel aesthetics */}
+          {/* Right: Dual vertical marquee stats with film-reel aesthetics and 4:3 cards, slight tilt */}
           <div className="relative">
             <div className="absolute -inset-6 blur-3xl" style={{ background: 'linear-gradient(45deg, rgba(72,21,78,0.25), rgba(102,34,73,0.18), rgba(238,156,96,0.15))' }} aria-hidden="true" />
 
             <div className="relative grid grid-cols-2 gap-5">
               {/* Column A */}
-              <div className="h-[420px] overflow-hidden rounded-2xl film-strip vignette marquee-mask">
+              <div className="h-[420px] overflow-hidden rounded-2xl film-strip vignette marquee-mask tilt-left">
                 <ul className="marquee-up film-grain">
                   {marqueeStats.map((s, idx) => (
                     <li key={`a-${idx}`} className="px-4 py-3">
-                      <div className="reel-frame rounded-xl p-4">
-                        <div className="text-2xl md:text-3xl font-extrabold" style={{ color: 'var(--brand-white)' }}>{s.kpi}</div>
-                        <div className="mt-1 text-sm md:text-base" style={{ color: 'var(--brand-blush)' }}>{s.label}</div>
+                      <div className="reel-frame rounded-xl aspect-4-3">
+                        <div className="aspect-inner p-4 flex flex-col justify-center">
+                          <div className="text-2xl md:text-3xl font-extrabold" style={{ color: 'var(--brand-white)' }}>{s.kpi}</div>
+                          <div className="mt-1 text-sm md:text-base" style={{ color: 'var(--brand-blush)' }}>{s.label}</div>
+                        </div>
                       </div>
                     </li>
                   ))}
@@ -81,13 +83,15 @@ function Hero() {
               </div>
 
               {/* Column B */}
-              <div className="h-[420px] overflow-hidden rounded-2xl film-strip vignette marquee-mask">
+              <div className="h-[420px] overflow-hidden rounded-2xl film-strip vignette marquee-mask tilt-right">
                 <ul className="marquee-up film-grain" style={{ animationDuration: '20s', animationDelay: '1.5s' }}>
                   {marqueeStats.map((s, idx) => (
                     <li key={`b-${idx}`} className="px-4 py-3">
-                      <div className="reel-frame rounded-xl p-4">
-                        <div className="text-2xl md:text-3xl font-extrabold" style={{ color: 'var(--brand-white)' }}>{s.kpi}</div>
-                        <div className="mt-1 text-sm md:text-base" style={{ color: 'var(--brand-blush)' }}>{s.label}</div>
+                      <div className="reel-frame rounded-xl aspect-4-3">
+                        <div className="aspect-inner p-4 flex flex-col justify-center">
+                          <div className="text-2xl md:text-3xl font-extrabold" style={{ color: 'var(--brand-white)' }}>{s.kpi}</div>
+                          <div className="mt-1 text-sm md:text-base" style={{ color: 'var(--brand-blush)' }}>{s.label}</div>
+                        </div>
                       </div>
                     </li>
                   ))}

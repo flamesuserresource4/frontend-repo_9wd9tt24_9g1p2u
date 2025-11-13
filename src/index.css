@@ -83,12 +83,21 @@
   /* Glass with brand tint */
   .glass { @apply backdrop-blur-md; background: linear-gradient(180deg, rgba(73,24,78,0.35), rgba(28,25,52,0.35)); border: 1px solid rgba(233,188,185,0.25); }
 
-  /* Brand gradient text */
+  /* Brand gradient text (default) */
   .gradient-text {
     background-image: linear-gradient(100deg, var(--brand-plum-900), var(--brand-plum-700), var(--brand-rose-600), var(--brand-apricot));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  /* Higher-contrast gradient text for dark backgrounds */
+  .gradient-text-contrast {
+    background-image: linear-gradient(100deg, var(--brand-apricot), #ffd9b5, var(--brand-white));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5), 0 0 12px rgba(238,156,96,0.2);
   }
 
   /* Brand glow ring */
@@ -136,4 +145,17 @@
 
   /* Reel frames */
   .reel-frame { background: linear-gradient(180deg, rgba(233,188,185,0.08), rgba(28,25,52,0.6)); border: 1px solid rgba(233,188,185,0.2); box-shadow: 0 2px 8px rgba(0,0,0,0.35); }
+
+  /* Aspect ratio 4:3 utility for cards */
+  .aspect-4-3 { position: relative; width: 100%; padding-bottom: 75%; }
+  .aspect-inner { position: absolute; inset: 0; }
+
+  /* Subtle tilt utilities for the marquee columns */
+  .tilt-left { transform: rotate(-2deg); transform-origin: center; }
+  .tilt-right { transform: rotate(2deg); transform-origin: center; }
+
+  @media (max-width: 640px) {
+    .tilt-left, .tilt-right { transform: none; }
+    .gradient-text-contrast { text-shadow: 0 1px 2px rgba(0,0,0,0.6); }
+  }
 }
